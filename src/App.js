@@ -14,7 +14,6 @@ const App = () => {
 
 
   useEffect(() => {
-    console.log('hi');
     axios.get('https://swapi.dev/api/people/')
       .then(res => {
         console.log(res);
@@ -24,9 +23,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">Return of the React</h1>
       {characters.map(character => {
-        return <Character character={character} characterName={character.name}/>
+        return <Character character={character} characterBirthYear={character.birth_year}/>
       })  
       }
     </div>
